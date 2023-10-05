@@ -1,28 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, useSearchParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
+import axios from "axios";
 
 function CustomerView() {
+  const params = useParams();
 
-  const params = useParams()
-
-  const [searchParams, setSearchParams] = useSearchParams()
-  console.log(...searchParams)
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(...searchParams);
   const [customerData, setCustomerData] = useState({});
 
   useEffect(() => {
-    loadUser()
-  }, [])
+    loadUser();
+  }, []);
   let loadUser = async () => {
     try {
-      let customer = await axios.get(`https://63fdfa3d19f41bb9f6587a85.mockapi.io/mockapi/Customers/${params.id}`)
-      setCustomerData(customer.data)
-    }
-    catch (error) {
-
-    }
-
-  }
+      let customer = await axios.get(
+        `https://63fdfa3d19f41bb9f6587a85.mockapi.io/mockapi/Customers/${params.id}`
+      );
+      setCustomerData(customer.data);
+    } catch (error) {}
+  };
 
   return (
     <div>
@@ -32,11 +29,8 @@ function CustomerView() {
       <h1>{customerData.age}</h1>
       <h1>{customerData.startdate}</h1>
       <h1>{customerData.salary}</h1>
-
-
-
     </div>
-  )
+  );
 }
 
-export default CustomerView
+export default CustomerView;
