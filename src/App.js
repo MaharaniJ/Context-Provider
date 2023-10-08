@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./css/sb-admin-2.css";
-import Dashboard from "./Dashboard";
-import Customers from "./Customers";
-import Portal from "./Portal";
-import Login from "./Login";
-import CustomerView from "./CustomerView";
-import EditCustomer from "./EditCustomer";
-import CreateCustomer from "./CreateCustomer";
+import Dashboard from "./components/Dashboard";
+import Customers from "./components/Customers";
+import Portal from "./pages/Portal";
+import Login from "./pages/Login";
+import CustomerView from "./components/CustomerView";
+import EditCustomer from "./components/EditCustomer";
+import CreateCustomer from "./components/CreateCustomer";
 import { UserProvider } from "./UserContext";
-import Profile from "./Profile";
+import Profile from "./pages/Profile";
 
 function App() {
   return (

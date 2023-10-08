@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useContext } from "react";
-import UserContext from "./UserContext";
+import UserContext from "../UserContext";
 
 function Customers() {
   const context = useContext(UserContext);

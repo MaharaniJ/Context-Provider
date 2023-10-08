@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Card from "./Card";
-import UserContext from "./UserContext";
+import Card from "../components/Card";
+import UserContext from "../UserContext";
 
 function Dashboard() {
   const context = useContext(UserContext);
